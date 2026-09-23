@@ -1,0 +1,14 @@
+name: Quality
+on:
+  pull_request:
+    types: [opened, reopened, ready_for_review, synchronize]
+permissions:
+  contents: read
+jobs:
+  quality:
+    name: Quality
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - run: echo "this stub stands in for purba's real gate"
